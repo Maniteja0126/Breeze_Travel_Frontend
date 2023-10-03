@@ -26,7 +26,7 @@ export const Payment = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://travelapp.cyclic.app/api/hotels/${id}`
+          `https://breezetravel.cyclic.cloud/api/hotels/${id}`
         );
         setSingleHotel(data);
       } catch (err) {
@@ -58,11 +58,11 @@ export const Payment = () => {
     }
 
     const options = {
-      key: "rzp_test_VSdp7X3K39GwBK",
+      key: "rzp_test_etSbPEEHMNWEYQ",
       amount: totalPayableAmount * 100,
       currency: "INR",
-      name: "TravelO",
-      email: "sakari@gmail.com",
+      name: "TouristHaven",
+      email: "mani@gmail.com",
       contact: "9876543210",
       description: "Thank you for booking with us",
 
@@ -75,8 +75,8 @@ export const Payment = () => {
         navigate("/order-summary");
       },
       prefill: {
-        name: "Prakash Sakari",
-        email: "sakari@gmail.com",
+        name: "Mani Teja",
+        email: "mani@gmail.com",
         contact: "9876543210",
       },
     };
