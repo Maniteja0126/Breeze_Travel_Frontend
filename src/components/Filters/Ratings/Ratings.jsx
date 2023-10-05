@@ -1,4 +1,4 @@
-import { useFilter } from "../../../context";
+import { useFilter } from "../../../Context";
 
 const ratings = ["1", "2", "3", "4", "5"];
 

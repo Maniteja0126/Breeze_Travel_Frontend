@@ -7,7 +7,7 @@ import {
   FreeCancel,
 } from "./index";
 
-import { useFilter } from "../../context";
+import { useFilter } from "../../Context";
 
 export const Filter = () => {
   const { filterDispatch } = useFilter();

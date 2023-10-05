@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { DateSelector } from "../DateSelector/DateSelector";
 import "./SearchStayWithDate.css";
-import { useDate, useCategory } from "../../context";
+import { useDate, useCategory } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
 export const SearchStayWithDate = () => {

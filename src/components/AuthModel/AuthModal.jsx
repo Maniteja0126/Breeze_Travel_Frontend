@@ -1,6 +1,6 @@
 import { AuthLogin, AuthSignup } from "../index";
 import "./AuthModal.css";
-import { useAuth } from "../../context";
+import { useAuth } from "../../Context";
 
 export const AuthModal = () => {
   const { authDispatch, selectedTab } = useAuth();

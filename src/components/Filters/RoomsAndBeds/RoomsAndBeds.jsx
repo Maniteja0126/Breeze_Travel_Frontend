@@ -1,4 +1,4 @@
-import { useFilter } from "../../../context";
+import { useFilter } from "../../../Context";
 
 const numberOfAmenities = ["Any", "1", "2", "3", "4", "5+"];
 

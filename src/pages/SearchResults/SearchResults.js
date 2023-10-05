@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { HotelCard, Navbar, Alert } from "../../components";
-import { useDate, useCategory, useAlert } from "../../context";
+import { useDate, useCategory, useAlert } from "../../Context";
 import axios from "axios";
 
 export const SearchResults = () => {

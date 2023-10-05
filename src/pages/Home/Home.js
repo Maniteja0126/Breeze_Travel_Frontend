@@ -12,7 +12,7 @@ import {
   Alert,
 } from "../../components";
 import "./Home.css";
-import { useCategory, useDate,useFilter, useAuth, useAlert } from "../../context";
+import { useCategory, useDate,useFilter, useAuth, useAlert } from "../../Context";
 import {
   getHotelsByPrice,
   getHotelsByRoomsAndBeds,

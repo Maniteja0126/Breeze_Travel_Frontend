@@ -10,7 +10,7 @@ import {
   WishlistProvider,
   HotelProvider,
   AlertProvider
-} from "./context";
+} from "./Context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

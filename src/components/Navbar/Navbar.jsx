@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { useDate, useAuth } from "../../context";
+import { useDate, useAuth } from "../../Context";
 import { Link } from "react-router-dom";
 
 export const Navbar = ({route}) => {

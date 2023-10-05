@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useDate, useHotel } from "../../context";
+import { useDate, useHotel } from "../../Context";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 import "./Payment.css";

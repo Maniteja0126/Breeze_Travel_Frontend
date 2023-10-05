@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth, useDate, useAlert } from "../../context";
+import { useAuth, useDate, useAlert } from "../../Context";
 import {
   FinalPrice,
   HotelDetails,

@@ -1,5 +1,5 @@
 import "./FreeCancel.css";
-import { useFilter } from "../../../context";
+import { useFilter } from "../../../Context";
 export const FreeCancel = () => {
   const { filterDispatch, isCancelable } = useFilter();
 

@@ -1,7 +1,7 @@
 import "./Auth.css";
 import { validateNumber, validatePassword } from "../../utils";
 import { loginHandler } from "../../services";
-import { useAuth, useAlert } from "../../context";
+import { useAuth, useAlert } from "../../Context";
 
 let isNumberValid, isPasswordValid;
 

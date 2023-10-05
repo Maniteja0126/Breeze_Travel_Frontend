@@ -1,5 +1,5 @@
 import "./Auth.css";
-import { useAuth, useAlert } from "../../context";
+import { useAuth, useAlert } from "../../Context";
 import {
   validateEmail,
   validateName,

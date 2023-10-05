@@ -1,4 +1,4 @@
-import { useHotel, useDate, useFilter } from "../../context";
+import { useHotel, useDate, useFilter } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import "./OrderSummaryComp.css";
 

@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { useFilter } from "../../../context";
+import { useFilter } from "../../../Context";
 
 const minDifference = 500;
 

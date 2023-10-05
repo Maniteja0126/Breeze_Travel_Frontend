@@ -1,5 +1,5 @@
 import "./ProfileDropDown.css";
-import { useAuth, useDate, useFilter, useWishlist, useAlert } from "../../context";
+import { useAuth, useDate, useFilter, useWishlist, useAlert } from "../../Context";
 import { useNavigate } from "react-router-dom";
 
 export const ProfileDropDown = () => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useCategory, useFilter } from "../../context";
+import { useCategory, useFilter } from "../../Context";
 import Carousel from 'react-elastic-carousel';
 import "./Categories.css";
 

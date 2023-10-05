@@ -1,5 +1,5 @@
 import "./FinalPrice.css";
-import { useDate, useAuth, useAlert } from "../../context";
+import { useDate, useAuth, useAlert } from "../../Context";
 import { DateSelector } from "../DateSelector/DateSelector";
 import { useNavigate } from "react-router-dom";
 

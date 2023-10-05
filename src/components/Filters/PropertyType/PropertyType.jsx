@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { useFilter } from "../../../context";
+import { useFilter } from "../../../Context";
 
 const propertyTypes = [
   { id: uuid(), type: "House" },

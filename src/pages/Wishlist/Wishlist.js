@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar, HotelCard, ProfileDropDown, AuthModal, Alert } from "../../components";
-import { useWishlist, useAuth, useAlert } from "../../context";
+import { useWishlist, useAuth, useAlert } from "../../Context";
 import "./Wishlist.css";
 
 export const Wishlist = () => {
