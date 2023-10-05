@@ -67,11 +67,20 @@ export const Payment = () => {
       description: "Thank you for booking with us",
 
       handler: ({ payment_id }) => {
-        setHotel({...singleHotel, orderId: uuid(),
-        payment_id, 
-        checkInDate: checkInDate.toLocaleDateString("en-US", { day: "numeric", month: "short" }),
-        checkOutDate: checkOutDate.toLocaleDateString("en-US", { day: "numeric", month: "short" }),
-        totalPayableAmount});
+        setHotel({
+          ...singleHotel,
+          orderId: uuid(),
+          payment_id,
+          checkInDate: checkInDate.toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "short",
+          }),
+          checkOutDate: checkOutDate.toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "short",
+          }),
+          totalPayableAmount,
+        });
         navigate("/order-summary");
       },
       prefill: {
@@ -90,7 +99,7 @@ export const Payment = () => {
       <header className="heading">
         <h1 className="heading-1">
           <Link className="link" to="/">
-            TravelO
+            TouristHaven
           </Link>
         </h1>
       </header>

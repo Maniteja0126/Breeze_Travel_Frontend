@@ -16,7 +16,6 @@ export const SearchResults = () => {
           `https://breezetravel.cyclic.cloud/api/hotels?category=${hotelCategory}`
         );
         setHotels(data);
-        
       } catch (err) {
         console.log(err);
       }
@@ -24,7 +23,7 @@ export const SearchResults = () => {
   }, [destination, hotelCategory]);
 
   const filteredSearchResults = hotels.filter(
-    ({ city, address, state }) => 
+    ({ city, address, state }) =>
       address.toLowerCase() === destination.toLowerCase() ||
       city.toLowerCase() === destination.toLowerCase() ||
       state.toLowerCase() === destination.toLowerCase()
