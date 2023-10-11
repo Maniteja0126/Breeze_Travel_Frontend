@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCategory, useFilter } from "../../Context";
-import Carousel from 'react-elastic-carousel';
 import "./Categories.css";
 
 export const Categories = () => {
   const [categories, setCategories] = useState([]);
+  const [numberOfCategoryToShow, setNumberOfCategoryToShow] = useState(0)
   const { hotelCategory, setHotelCategory } = useCategory();
 
   const { filterDispatch } = useFilter();
@@ -15,6 +15,15 @@ export const Categories = () => {
       type: "SHOW_FILTER_MODAL",
     });
   };
+  const handleCategoryClick = (category) => {
+    setHotelCategory(category);
+  };
+  const handleShowMoreRightClick = () => {
+    setNumberOfCategoryToShow(prev => prev + 10)
+  }
+  const handleShowMoreLeftClick = () => {
+    setNumberOfCategoryToShow((prev) => prev - 10)
+  }
 
   useEffect(() => {
     (async () => {
@@ -22,24 +31,43 @@ export const Categories = () => {
         const { data } = await axios.get(
           "https://breezetravel.cyclic.cloud/api/category"
         );
-        setCategories(data);
+        const categoriesToShow = data.slice(
+          numberOfCategoryToShow + 10 > data.length ? data.length - 10 : numberOfCategoryToShow,
+          numberOfCategoryToShow > data.length ? data.length : numberOfCategoryToShow + 10)
+        setCategories(categoriesToShow);
       } catch (err) {
         console.log(err);
       }
     })();
-  }, []);
+  }, [numberOfCategoryToShow]);
 
-  const handleCategoryClick = (category) => {
-    setHotelCategory(category);
-  };
+
 
   return (
     <section className="categories d-flex gap">
-      <Carousel className="carousel" itemsToShow={9} itemsToScroll={6} pagination={false}>
-        {
-          categories && categories.map(({ _id, category }) => <span key={_id} className={`${category === hotelCategory ? "category-color" : ""} item`} onClick={() => handleCategoryClick(category)}>{category}</span>)
-        }
-      </Carousel>
+      {
+        numberOfCategoryToShow >= 10 && (<button
+          className="button btn-category btn-left fixed cursor-pointer"
+          onClick={handleShowMoreLeftClick}>
+          <span className="material-icons-outlined">
+            chevron_left
+          </span>
+        </button>)
+      }
+
+      {
+        categories && categories.map(({ _id, category }) => <span key={_id} className={`${category === hotelCategory ? "category-color" : ""} item`} onClick={() => handleCategoryClick(category)} >{category}</span>)
+      }
+      {
+        numberOfCategoryToShow < categories.length && (<button
+          className="button btn-category btn-right fixed cursor-pointer"
+          onClick={handleShowMoreRightClick}>
+          <span className="material-icons-outlined">
+            chevron_right
+          </span>
+        </button>)
+      }
+
       <div>
         <button
           className="button btn-filter d-flex align-center gap-small cursor-pointer"

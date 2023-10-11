@@ -32,7 +32,7 @@ export const SearchResults = () => {
   return (
     <Fragment>
       <Navbar />
-      <section className="main d-flex align-center gap-larger">
+      <section className="main d-flex wrap align-center gap-larger">
         {filteredSearchResults ? (
           filteredSearchResults.map((hotel) => (
             <HotelCard key={hotel._id} hotel={hotel} />
