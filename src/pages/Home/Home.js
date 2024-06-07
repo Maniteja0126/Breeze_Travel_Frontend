@@ -46,7 +46,7 @@ export const Home = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://breezetravel.cyclic.cloud/api/hotels?category=${hotelCategory}`
+          `https://breeze-travel-backend.onrender.com/api/hotels?category=${hotelCategory}`
         );
 
         setTestData(data);
