@@ -29,7 +29,7 @@ export const Categories = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          "https://breezetravel.cyclic.cloud/api/category"
+          "https://breeze-travel-backend.onrender.com/api/category"
         );
         const categoriesToShow = data.slice(
           numberOfCategoryToShow + 10 > data.length ? data.length - 10 : numberOfCategoryToShow,
